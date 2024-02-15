@@ -16,12 +16,12 @@
       <header>Signup</header>
       <form action="{% url 'register' %}" method="POST">
         {% csrf_token %}
-        <input type="text" placeholder="Enter your first name" name="first_name">
-        <input type="text" placeholder="Enter your last name" name="last_name">
-        <input type="text" placeholder="Enter your username" name="username">
-        <input type="password" placeholder="Create a password" name="password">
-        <input type="password" placeholder="Confirm your password" name="con_password">
-        <input type="submit" class="button" value="Signup">
+        <input type="text" placeholder="Ismingiz" name="first_name">
+        <input type="text" placeholder="Familiyangiz" name="last_name">
+        <input type="text" placeholder="Foydalanuvchi nomi" name="username">
+        <input type="password" placeholder="Parol" name="password">
+        <input type="password" placeholder="Parolni qaytadan kiriting" name="con_password">
+        <input type="submit" class="button" value="Ro'yxatdan o'tish">
         <center>
           {% if error %}
           <p style="color: red;">{{ error }}</p>
@@ -30,8 +30,8 @@
         
       </form>
       <div class="signup">
-        <span class="signup">Already have an account?
-          <a href="{% url 'login' %}"><label for="check">Signin</label></a>
+        <span class="signup">Ro'yxatdan o'tganmisiz?
+          <a href="{% url 'login' %}"><label for="check">Kirish</label></a>
         </span>
       </div>
     </div>

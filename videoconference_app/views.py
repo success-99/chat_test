@@ -74,3 +74,10 @@ def join_room(request):
         roomID = request.POST['roomID']
         return redirect("/meeting?roomID=" + roomID)
     return render(request, 'joinroom.html')
+
+def handling_404(request, exception):
+    return render(request, '404.html', {})
+
+
+def handling_500(request):
+    return render(request, '500.html')

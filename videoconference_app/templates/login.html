@@ -13,12 +13,12 @@
 <body>
   <div class="container">
     <div class="login form">
-      <header>Login</header>
+      <header>Kirish</header>
       <form action="{% url 'login' %}" method="POST">
         {% csrf_token %}
-        <input type="text" placeholder="Enter your username" name="username">
-        <input type="password" placeholder="Enter your password" name="password">
-        <input type="submit" class="button" value="Login">
+        <input type="text" placeholder="Foydalanuvchi nomi" name="username">
+        <input type="password" placeholder="Parol" name="password">
+        <input type="submit" class="button" value="Kirish">
         <center>
           {% if success %}
           <p style="color: green;"><b>{{ success }}</b></p>
@@ -29,8 +29,8 @@
         </center>
       </form>
       <div class="signup">
-        <span class="signup">Don't have an account?
-         <a href="{% url 'register' %}"><label for="check">Signup</label></a>
+        <span class="signup">Kirish uchun ro'yxatdan o'tganmisiz?
+         <a href="{% url 'register' %}"><label for="check">Ro'yxatdan o'tish</label></a>
         </span>
       </div>
     </div>

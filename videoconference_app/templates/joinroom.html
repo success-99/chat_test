@@ -13,11 +13,11 @@
 <body>
   <div class="container">
     <div class="login form">
-      <header>Join Room</header>
+      <header>Videochatga kirish</header>
       <form action="{% url 'join_room' %}" method="POST">
         {% csrf_token %}
-        <input type="text" placeholder="Enter room ID" name="roomID">
-        <input type="submit" class="button" value="Join">
+        <input type="text" placeholder="Videochat ID sini kiriting" name="roomID">
+        <input type="submit" class="button" value="Qo'shilish">
         <center>
           {% if success %}
           <p style="color: green;"><b>{{ success }}</b></p>
